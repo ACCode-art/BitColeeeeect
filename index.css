@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .main__left {
+  -webkit-box-flex: 0.25;
+      -ms-flex: 0.25;
+          flex: 0.25;
+  background-color: #eee0cb;
+}
+
+.main .main__left .searchContainer {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .main__left .searchContainer input {
+  padding-left: 10px;
+  outline: none;
+  height: 50%;
+  width: 70%;
+  border-radius: 10px;
+  border: none;
+  background-color: white;
+}
+
+.main .main__left .searchResults {
+  height: 90vh;
+  background-color: #ece8e1;
+  overflow-y: scroll;
+  padding: 0 30px;
+}
+
+.main .main__left .searchResults::-webkit-scrollbar {
+  background: white;
+  width: 5px;
+}
+
+.main .main__left .searchResults::-webkit-scrollbar-thumb {
+  background-color: black;
+}
+
+.main .main__left .searchResults .coinResults {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  background-color: white;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.main .main__left .searchResults .coinResults .coinResults__left {
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 20px;
+}
+
+.main .main__left .searchResults .coinResults .coinResults__left .symbol {
+  margin-left: 10px;
+  opacity: 0.5;
+}
+
+.main .main__left .searchResults .coinResults .coinResults__right {
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.main .main__right {
+  -webkit-box-flex: 0.8;
+      -ms-flex: 0.8;
+          flex: 0.8;
+}
+
+.main .main__right .main__right-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 10%;
+  background-color: #eee0cb;
+}
+
+.main .main__right .main__right-top .right-top-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  -webkit-box-flex: 0.8;
+      -ms-flex: 0.8;
+          flex: 0.8;
+}
+
+.main .main__right .main__right-top .right-top-left p {
+  margin-left: 5px;
+}
+
+.main .main__right .main__right-top .right-top-left img {
+  width: 50px;
+}
+
+.main .main__right .main__right-top .right-top-right {
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .main__right .main__right-bottom {
+  height: 90%;
+  background-color: whitesmoke;
+}
+
+.main .main__right .main__right-bottom .cryptoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.hover {
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.hover:hover {
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+  cursor: pointer;
+  background-color: #add165 !important;
+}
+/*# sourceMappingURL=index.css.map */

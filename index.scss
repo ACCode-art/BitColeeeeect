@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+
+  .main__left {
+    flex: 0.25;
+    background-color: #eee0cb;
+
+    .searchContainer {
+      height: 10vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      input {
+        padding-left: 10px;
+        outline: none;
+        height: 50%;
+        width: 70%;
+        border-radius: 10px;
+        border: none;
+        background-color: rgb(255, 255, 255);
+      }
+    }
+
+    .searchResults {
+      height: 90vh;
+      background-color: #ece8e1;
+      overflow-y: scroll;
+      padding: 0 30px;
+
+      &::-webkit-scrollbar {
+        background: rgb(255, 255, 255);
+        width: 5px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: rgb(0, 0, 0);
+      }
+
+      .coinResults {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        background-color: white;
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 10px;
+
+        .coinResults__left {
+          flex: 0.5;
+          display: flex;
+          align-items: center;
+          padding-left: 20px;
+          .symbol {
+            margin-left: 10px;
+            opacity: 0.5;
+          }
+        }
+        .coinResults__right {
+          flex: 0.5;
+          display: flex;
+          justify-content: flex-end;
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+  .main__right {
+    flex: 0.8;
+
+    .main__right-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 10%;
+      background-color: #eee0cb;
+      .right-top-left {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        flex: 0.8;
+        p {
+          margin-left: 5px;
+        }
+        img {
+          width: 50px;
+        }
+      }
+      .right-top-right {
+        flex: 0.2;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+    }
+    .main__right-bottom {
+      height: 90%;
+      background-color: whitesmoke;
+
+      .cryptoContainer {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+// js
+
+.hover {
+  transition: 300ms;
+  &:hover {
+    transform: translateX(20px);
+    cursor: pointer;
+    background-color: rgb(173, 209, 101) !important;
+  }
+}
