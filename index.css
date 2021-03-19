@@ -12,10 +12,9 @@
 }
 
 .main .main__left {
-  -webkit-box-flex: 0.25;
-      -ms-flex: 0.25;
-          flex: 0.25;
-  background-color: #eee0cb;
+  -webkit-box-flex: 0.3;
+      -ms-flex: 0.3;
+          flex: 0.3;
 }
 
 .main .main__left .searchContainer {
@@ -29,21 +28,23 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #050608;
 }
 
 .main .main__left .searchContainer input {
+  color: white;
   padding-left: 10px;
   outline: none;
   height: 50%;
   width: 70%;
   border-radius: 10px;
   border: none;
-  background-color: white;
+  background-color: rgba(238, 238, 238, 0.13);
 }
 
 .main .main__left .searchResults {
   height: 90vh;
-  background-color: #ece8e1;
+  background-color: #161a22;
   overflow-y: scroll;
   padding: 0 30px;
 }
@@ -54,10 +55,11 @@
 }
 
 .main .main__left .searchResults::-webkit-scrollbar-thumb {
-  background-color: black;
+  background-color: #464646;
 }
 
 .main .main__left .searchResults .coinResults {
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,10 +70,12 @@
       -ms-flex-align: center;
           align-items: center;
   height: 60px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.123);
   width: 100%;
   margin-top: 10px;
   border-radius: 10px;
+  -webkit-animation: fade-in 1000ms ease-in-out;
+          animation: fade-in 1000ms ease-in-out;
 }
 
 .main .main__left .searchResults .coinResults .coinResults__left {
@@ -92,6 +96,11 @@
   opacity: 0.5;
 }
 
+.main .main__left .searchResults .coinResults .coinResults__left img {
+  width: 20px;
+  margin-right: 10px;
+}
+
 .main .main__left .searchResults .coinResults .coinResults__right {
   -webkit-box-flex: 0.5;
       -ms-flex: 0.5;
@@ -106,9 +115,9 @@
 }
 
 .main .main__right {
-  -webkit-box-flex: 0.8;
-      -ms-flex: 0.8;
-          flex: 0.8;
+  -webkit-box-flex: 0.7;
+      -ms-flex: 0.7;
+          flex: 0.7;
 }
 
 .main .main__right .main__right-top {
@@ -122,10 +131,11 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 10%;
-  background-color: #eee0cb;
+  background-color: #050608;
 }
 
 .main .main__right .main__right-top .right-top-left {
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -161,17 +171,99 @@
           align-items: center;
 }
 
+.main .main__right .main__right-top .right-top-right .icons {
+  color: white;
+}
+
 .main .main__right .main__right-bottom {
   height: 90%;
-  background-color: whitesmoke;
+  background-color: #161a22;
 }
 
 .main .main__right .main__right-bottom .cryptoContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: #050608;
+  overflow-x: hidden;
+}
+
+.main .main__right .main__right-bottom .cryptoContainer .welcome {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+  -webkit-animation: fade-in 2000ms ease-in-out;
+          animation: fade-in 2000ms ease-in-out;
+}
+
+.main .main__right .main__right-bottom .cryptoContainer .coinMore {
+  -webkit-animation: fade-in-right 1000ms ease-in-out;
+          animation: fade-in-right 1000ms ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  background-color: #161a22;
+  width: 60%;
+  height: 70%;
+  border-radius: 25px;
+}
+
+.main .main__right .main__right-bottom .cryptoContainer .coinMore .coinMore__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .main__right .main__right-bottom .cryptoContainer .coinMore .coinMore__header h1 {
+  font-size: 80px;
+  margin-left: 10px;
+}
+
+.main .main__right .main__right-bottom .cryptoContainer .coinMore .coinMore__header img {
+  width: 100px;
+}
+
+.main .main__right .main__right-bottom .cryptoContainer .coinMore p {
+  font-size: 30px;
+  opacity: 0.7;
 }
 
 .hover {
@@ -180,9 +272,50 @@
 }
 
 .hover:hover {
+  color: black !important;
   -webkit-transform: translateX(20px);
           transform: translateX(20px);
   cursor: pointer;
   background-color: #add165 !important;
+}
+
+@-webkit-keyframes fade-in-right {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(400px);
+            transform: translateX(400px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(400px);
+            transform: translateX(400px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=index.css.map */

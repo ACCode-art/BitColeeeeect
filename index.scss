@@ -3,34 +3,40 @@
   font-family: "PT Sans", sans-serif;
 }
 
+//colors
+
+$primaryColor: #050608;
+$secondaryColor: #161a22;
+
 .main {
   height: 100vh;
   width: 100vw;
   display: flex;
 
   .main__left {
-    flex: 0.25;
-    background-color: #eee0cb;
+    flex: 0.3;
 
     .searchContainer {
       height: 10vh;
       display: flex;
       align-items: center;
       justify-content: center;
+      background-color: $primaryColor;
       input {
+        color: white;
         padding-left: 10px;
         outline: none;
         height: 50%;
         width: 70%;
         border-radius: 10px;
         border: none;
-        background-color: rgb(255, 255, 255);
+        background-color: rgba(238, 238, 238, 0.13);
       }
     }
 
     .searchResults {
       height: 90vh;
-      background-color: #ece8e1;
+      background-color: $secondaryColor;
       overflow-y: scroll;
       padding: 0 30px;
 
@@ -39,18 +45,20 @@
         width: 5px;
       }
       &::-webkit-scrollbar-thumb {
-        background-color: rgb(0, 0, 0);
+        background-color: rgb(70, 70, 70);
       }
 
       .coinResults {
+        color: white;
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 60px;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.123);
         width: 100%;
         margin-top: 10px;
         border-radius: 10px;
+        animation: fade-in 1000ms ease-in-out;
 
         .coinResults__left {
           flex: 0.5;
@@ -60,6 +68,10 @@
           .symbol {
             margin-left: 10px;
             opacity: 0.5;
+          }
+          img {
+            width: 20px;
+            margin-right: 10px;
           }
         }
         .coinResults__right {
@@ -72,15 +84,16 @@
     }
   }
   .main__right {
-    flex: 0.8;
+    flex: 0.7;
 
     .main__right-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 10%;
-      background-color: #eee0cb;
+      background-color: $primaryColor;
       .right-top-left {
+        color: white;
         display: flex;
         align-items: center;
         font-weight: bold;
@@ -97,15 +110,64 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        .icons {
+          color: white;
+        }
       }
     }
     .main__right-bottom {
       height: 90%;
-      background-color: whitesmoke;
+      background-color: $secondaryColor;
 
       .cryptoContainer {
         display: flex;
-        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        background-color: $primaryColor;
+        overflow-x: hidden;
+
+        .welcome {
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          height: 100%;
+          width: 100%;
+          animation: fade-in 2000ms ease-in-out;
+        }
+        .coinMore {
+          animation: fade-in-right 1000ms ease-in-out;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          color: white;
+          background-color: $secondaryColor;
+          width: 60%;
+          height: 70%;
+          border-radius: 25px;
+
+          .coinMore__header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h1 {
+              font-size: 80px;
+              margin-left: 10px;
+            }
+            img {
+              width: 100px;
+            }
+          }
+
+          p {
+            font-size: 30px;
+            opacity: 0.7;
+          }
+        }
       }
     }
   }
@@ -116,8 +178,27 @@
 .hover {
   transition: 300ms;
   &:hover {
+    color: black !important;
     transform: translateX(20px);
     cursor: pointer;
     background-color: rgb(173, 209, 101) !important;
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(400px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
