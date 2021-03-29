@@ -114,6 +114,10 @@
   padding-right: 20px;
 }
 
+.main .main__left .searchResults .coinResults .coinResults__displayNone {
+  display: none;
+}
+
 .main .main__right {
   -webkit-box-flex: 0.7;
       -ms-flex: 0.7;
@@ -262,7 +266,7 @@
 }
 
 .main .main__right .main__right-bottom .cryptoContainer .coinMore p {
-  font-size: 30px;
+  font-size: 20px;
   opacity: 0.7;
 }
 
@@ -277,6 +281,14 @@
           transform: translateX(20px);
   cursor: pointer;
   background-color: #add165 !important;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
 }
 
 @-webkit-keyframes fade-in-right {
